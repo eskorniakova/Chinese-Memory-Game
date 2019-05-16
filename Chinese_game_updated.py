@@ -51,7 +51,7 @@ def button1text():
     #we want this function to create a new rectangle that has text or image displayed on it
     #add background color change for all buttons
     canvas.create_rectangle(50,50,110,120, fill = 'yellow')
-    canvas.create_text(80,80,  fill = "red", text='你好')
+    canvas.create_text(80,80,  fill = "maroon", text='你好')
     canvas.after(2000, cover1)
 
 
