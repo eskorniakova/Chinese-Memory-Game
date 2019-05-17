@@ -68,7 +68,6 @@ def button2text():
 
 def button3text():
     #add background color change for all buttons
-
     print("写字")
     canvas.create_rectangle(50,310,110,380, fill = 'yellow')
     canvas.create_text(80,340, fill = "red", text='写字')
@@ -112,20 +111,20 @@ def home_screen():
     b2.place(x = 40, y = 270)
 
     cover3()
-    b = ttk.Button(canvas, text = "Write Characters", command=button3text)
+    b3 = ttk.Button(canvas, text = "Write Characters", command=button3text)
     b.place(x = 40, y = 390)
 
     cover4()
-    b = ttk.Button(canvas, text = "Sing", command=button4text)
+    b4 = ttk.Button(canvas, text = "Sing", command=button4text)
     b.place(x = 240, y = 140)
 
     cover5()
-    b = ttk.Button(canvas, text = "Draw", command=button5text)
+    b5 = ttk.Button(canvas, text = "Draw", command=button5text)
     b.place(x = 240, y = 270)
 
     cover6()
     #card6 = canvas.create_rectangle(250,310,310,380, fill = 'maroon')
-    b = ttk.Button(canvas, text = "Cheap", command=button6text)
+    b6 = ttk.Button(canvas, text = "Cheap", command=button6text)
     b.place(x = 240, y = 390)
 
 
@@ -135,8 +134,23 @@ def home_screen():
 
 
 
-    def button_check():
-        if button1 = button2 
+    #def button_check():
+        #if button1 = button2
+
+
+# var = IntVar()
+#
+# c = Checkbutton(canvas, text="Expand", variable=var)
+# c.pack()
+#
+# mainloop()
+
+# v = IntVar()
+#
+# Radiobutton(canvas, text="One", variable=v, value=1).pack(anchor=W)
+# Radiobutton(canvas, text="Two", variable=v, value=2).pack(anchor=W)
+#
+# mainloop()
 
 
 
