@@ -92,7 +92,7 @@ def button6text():
     canvas.after(2000, cover6)
 
 
-
+#:)
 def home_screen():
 #create six cards that will flip when
 #clicked on/when click on the adjacent "click" button
