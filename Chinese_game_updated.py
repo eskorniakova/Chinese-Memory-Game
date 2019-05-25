@@ -2,16 +2,33 @@
 from tkinter import *
 from tkinter import ttk
 import time
+from tkinter import messagebox
 
 
-#titles the window
+
+
 window = Tk()
+#titles the window
 window.title('Chinese Memory Game')
+
+#outside box color (window)
+window.configure(bg='gold')
 #creates size of the canvas
-canvas = Canvas(window, width=400,height=450)
+canvas = Canvas(window, width=370,height=450)
+# filename = PhotoImage(file = "C:\\GitHub\\Chinese-Memory-Game\\Chinese_bg.png")
+# background_label = Label(window, image=filename)
+# background_label.place(x=0, y=0, relwidth=1, relheight=1)
 canvas.pack()
 
-b1 = ttk.Button(window,text= "hello")
+#inside box color (canvas)
+canvas.configure(bg= 'red')
+
+
+
+
+
+
+#b1 = ttk.Button(window,text= "hello")
 
 
 #if button is clicked, then start timer (call timer function). have timer function
@@ -19,22 +36,22 @@ b1 = ttk.Button(window,text= "hello")
 
 #covers for buttons after click
 def cover1():
-    canvas.create_rectangle(50,50,110,120, fill = 'maroon')
+    canvas.create_rectangle(40,50,120,120, fill = 'maroon')
 
 def cover2():
-    canvas.create_rectangle(50,180,110,250, fill = 'maroon')
+    canvas.create_rectangle(40,180,120,250, fill = 'maroon')
 
 def cover3():
-    canvas.create_rectangle(50,310,110,380, fill = 'maroon')
+    canvas.create_rectangle(40,310,120,380, fill = 'maroon')
 
 def cover4():
-    canvas.create_rectangle(250,50,310,120, fill = 'maroon')
+    canvas.create_rectangle(240,50,320,120, fill = 'maroon')
 
 def cover5():
-    canvas.create_rectangle(250,180,310,250, fill = 'maroon')
+    canvas.create_rectangle(240,180,320,250, fill = 'maroon')
 
 def cover6():
-    canvas.create_rectangle(250,310,310,380, fill = 'maroon')
+    canvas.create_rectangle(240,310,320,380, fill = 'maroon')
 
 #def timer(button):
     #timer = button.after(1000, cover6)
@@ -47,52 +64,58 @@ def cover6():
 #button functions for when clicked
 
 def button1text():
-    print("你好")
+    print("编码")
     #we want this function to create a new rectangle that has text or image displayed on it
     #add background color change for all buttons
-    canvas.create_rectangle(50,50,110,120, fill = 'yellow')
-    canvas.create_text(80,80,  fill = "maroon", text='你好')
-    canvas.after(2000, cover1)
+    canvas.create_rectangle(40,50,120,120, fill = 'yellow')
+    canvas.create_text(80,80,  fill = "maroon", text='编码')
+    canvas.create_text(80,100, fill = "maroon", text='bian1 ma3')
+    canvas.after(4000, cover1)
 
 
 
 def button2text():
     #add background color change for all buttons
 
-    print("游戏")
-    canvas.create_rectangle(50,180,110,250, fill = 'yellow')
+    print("软件")
+    canvas.create_rectangle(40,180,120,250, fill = 'yellow')
     #canvas.create_text(80,210, fill = "red", text='游戏')
-    canvas.create_text(80,210, fill = "red", text='hello')
-    canvas.after(2000, cover2)
+    canvas.create_text(80,210, fill = "maroon", text='软件')
+    canvas.create_text(80,230, fill = "maroon", text='ruan3 jian4')
+    canvas.after(4000, cover2)
     #button["bg"] = "red"
 
 def button3text():
     #add background color change for all buttons
-    print("写字")
-    canvas.create_rectangle(50,310,110,380, fill = 'yellow')
-    canvas.create_text(80,340, fill = "red", text='写字')
-    canvas.after(2000, cover3)
+    print("算法")
+    canvas.create_rectangle(40,310,120,380, fill = 'yellow')
+    canvas.create_text(80,340, fill = "maroon", text='算法')
+    canvas.create_text(80,360, fill = "maroon", text='suan4 fa3')
+    canvas.after(4000, cover3)
 
 def button4text():
-    print("唱歌")
-    canvas.create_rectangle(250,50,310,120, fill = 'yellow')
-    canvas.create_text(280,80,  fill = "red",  text='唱歌')
-    canvas.after(2000, cover4)
+    print("硬件")
+    canvas.create_rectangle(240,50,320,120, fill = 'yellow')
+    canvas.create_text(280,80,  fill = "maroon",  text='硬件')
+    canvas.create_text(280,100,  fill = "maroon",  text='ying4 jian4')
+    canvas.after(4000, cover4)
 
 def button5text():
-    print("画画")
-    canvas.create_rectangle(250,180,310,250, fill = 'yellow')
-    canvas.create_text(280,210,  fill = "red", text='画画')
-    canvas.after(2000, cover5)
+    print("键盘")
+    canvas.create_rectangle(240,180,320,250, fill = 'yellow')
+    canvas.create_text(280,210,  fill = "maroon", text='键盘')
+    canvas.create_text(280,230,  fill = "maroon", text='jian4 pan2')
+    canvas.after(4000, cover5)
 
 def button6text():
     print("便宜")
-    canvas.create_rectangle(250,310,310,380, fill = 'yellow')
-    canvas.create_text(280,340, fill = "red", text='便宜')
-    canvas.after(2000, cover6)
+    canvas.create_rectangle(240,310,320,380, fill = 'yellow')
+    canvas.create_text(280,340, fill = "maroon", text='电脑')
+    canvas.create_text(280,360, fill = "maroon", text='dian4 nao3')
+    canvas.after(4000, cover6)
 
 
-#:)
+
 def home_screen():
 #create six cards that will flip when
 #clicked on/when click on the adjacent "click" button
@@ -103,34 +126,34 @@ def home_screen():
 
     #button variables: location, command, style
     cover1()
-    b1 = ttk.Button(canvas, text = "Click me", command=button1text)
+    b1 = ttk.Button(canvas, text = "Coding", command=button1text)
     b1.place(x = 40, y = 140)
 
     cover2()
-    b2 = ttk.Button(canvas, text = "Click me", command=button2text)
+    b2 = ttk.Button(canvas, text = "Software", command=button2text)
     b2.place(x = 40, y = 270)
 
     cover3()
-    b3 = ttk.Button(canvas, text = "Write Characters", command=button3text)
-    b.place(x = 40, y = 390)
+    b3 = ttk.Button(canvas, text = "Algorithm", command=button3text)
+    b3.place(x = 40, y = 390)
 
     cover4()
-    b4 = ttk.Button(canvas, text = "Sing", command=button4text)
-    b.place(x = 240, y = 140)
+    b4 = ttk.Button(canvas, text = "Hardware", command=button4text)
+    b4.place(x = 240, y = 140)
 
     cover5()
-    b5 = ttk.Button(canvas, text = "Draw", command=button5text)
-    b.place(x = 240, y = 270)
+    b5 = ttk.Button(canvas, text = "Keyboard", command=button5text)
+    b5.place(x = 240, y = 270)
 
     cover6()
     #card6 = canvas.create_rectangle(250,310,310,380, fill = 'maroon')
-    b6 = ttk.Button(canvas, text = "Cheap", command=button6text)
-    b.place(x = 240, y = 390)
+    b6 = ttk.Button(canvas, text = "Computer", command=button6text)
+    b6.place(x = 240, y = 390)
 
 
 
-    button1 = button1text()
-    button2 = button2text()
+    # button1 = button1text()
+    # button2 = button2text()
 
 
 
