@@ -2,9 +2,13 @@
 from tkinter import *
 from tkinter import ttk
 import time
-from tkinter import messagebox
+# from tkinter import messagebox
+# from PIL import ImageTk
+# from PIL import Image
 
 
+#make tkinter-compatible image
+#img = ImageTk.PhotoImage(Image.open("Documents/GitHub/Chinese-Memory-Game/Chinese_bg.jpg"))
 
 
 window = Tk()
@@ -23,8 +27,8 @@ canvas.pack()
 #inside box color (canvas)
 canvas.configure(bg= 'red')
 
-
-
+# panel = tk.Label(window, image = img)
+# panel.pack(side = "bottom", fill = "both", expand = "yes")
 
 
 
